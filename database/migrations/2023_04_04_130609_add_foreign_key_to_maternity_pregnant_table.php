@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('specialists', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('user_id');
-            $table->bigInteger('specialization_id');
-            $table->timestamps();
+        Schema::table('maternity_pregnant', function (Blueprint $table) {
+            $table->bigInteger('used_id')->unsigned()->change();
+            $table->foreign('used_id')->references('id')->on('users')->onDelete('restrict');
         });
     }
 
@@ -28,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specialists');
+        Schema::table('maternity_pregnant', function (Blueprint $table) {
+            //
+        });
     }
 };
