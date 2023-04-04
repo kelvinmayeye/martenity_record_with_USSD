@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('specialists', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('used_id');
+            $table->bigInteger('specialization_id');
             $table->timestamps();
         });
     }
