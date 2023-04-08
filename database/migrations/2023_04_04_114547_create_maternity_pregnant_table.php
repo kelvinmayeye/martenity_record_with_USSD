@@ -15,12 +15,10 @@ return new class extends Migration
     {
         Schema::create('maternity_pregnant', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('code')->length(4)->unique();
-            $table->string('blood_group')->nullable();
-            $table->string('occupation');
-            $table->smallInteger('is_active')->length(1)->default(1);
+            $table->bigInteger('maternity_patient_id');
             $table->smallInteger('is_delivered')->length(1)->default(1);
-            $table->bigInteger('user_id');
+            $table->date('due_date');
+            $table->Integer('num_fetuses')->nullable();
             $table->timestamps();
         });
     }

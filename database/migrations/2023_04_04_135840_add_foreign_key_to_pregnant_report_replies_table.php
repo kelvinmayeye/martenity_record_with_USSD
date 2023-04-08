@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger('specialist_id')->unsigned()->change();
 
             $table->foreign('pregnant_report_id')->references('id')->on('pregnant_reports')->onDelete('restrict');
-            $table->foreign('specialist_id')->references('id')->on('sub_complication')->onDelete('restrict');
+            $table->foreign('specialist_id')->references('id')->on('specialists')->onDelete('restrict');
         });
     }
 

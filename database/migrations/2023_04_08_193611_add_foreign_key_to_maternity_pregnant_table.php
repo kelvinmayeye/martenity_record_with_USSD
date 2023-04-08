@@ -13,7 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('maternity_pregnant', function (Blueprint $table) {
+            $table->bigInteger('maternity_patient_id')->unsigned()->change();
+            $table->foreign('maternity_patient_id')->references('id')->on('maternity_patients')->onDelete('restrict');
+        });
     }
 
     /**
@@ -23,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('maternity_pregnant', function (Blueprint $table) {
+            //
+        });
     }
 };
