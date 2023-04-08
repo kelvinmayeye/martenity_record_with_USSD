@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\maternitypregnants\MaternityPregnantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('blank', function () {
-    return view('blank');
+Route::get('maternitypregnant',[MaternityPregnantController::class,'getpage']);
+
+Route::get('home', function () {
+    return view('pages.dashboard');
 });
