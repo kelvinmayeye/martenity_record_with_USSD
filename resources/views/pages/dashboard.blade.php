@@ -1,19 +1,66 @@
-@extends('layout.master')
+@extends('layouts.master')
+@section('page_title', 'My Dashboard')
 @section('content')
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-    <div
-        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group mr-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-            </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-            </button>
-        </div>
-    </div>
 
-@endsection
+       <div class="row">
+           <div class="col-sm-6 col-xl-3">
+               <div class="card card-body bg-blue-400 has-bg-image">
+                   <div class="media">
+                       <div class="media-body">
+                           <h3 class="mb-0">789</h3>
+                           <span class="text-uppercase font-size-xs font-weight-bold">Total Students</span>
+                       </div>
+
+                       <div class="ml-3 align-self-center">
+                           <i class="icon-users4 icon-3x opacity-75"></i>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="col-sm-6 col-xl-3">
+               <div class="card card-body bg-danger-400 has-bg-image">
+                   <div class="media">
+                       <div class="media-body">
+                           <h3 class="mb-0">87</h3>
+                           <span class="text-uppercase font-size-xs">Total Installments</span>
+                       </div>
+
+                       <div class="ml-3 align-self-center">
+                           <i class="icon-server icon-3x opacity-75"></i>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="col-sm-6 col-xl-3">
+               <div class="card card-body bg-success-400 has-bg-image">
+                   <div class="media">
+                       <div class="mr-3 align-self-center">
+                           <i class="icon-cash3 icon-3x opacity-75"></i>
+                       </div>
+
+                       <div class="media-body text-right">
+                           <h3 class="mb-0">783</h3>
+                           <span class="text-uppercase font-size-xs">Other Payments</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="col-sm-6 col-xl-3">
+               <div class="card card-body bg-indigo-400 has-bg-image">
+                   <div class="media">
+                       <div class="mr-3 align-self-center">
+                           <i class="icon-bus icon-3x opacity-75"></i>
+                       </div>
+
+                       <div class="media-body text-right">
+                           <h3 class="mb-0">7893</h3>
+                           <span class="text-uppercase font-size-xs">Transport Payments</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    @endsection

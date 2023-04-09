@@ -14,9 +14,9 @@ use App\Http\Controllers\maternitypatients\MaternityPatientController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('all/patients',[MaternityPatientController::class,'allPatients']);
 Route::get('patient/register',[MaternityPatientController::class,'registerPage']);
@@ -24,6 +24,10 @@ Route::post('patient/register',[MaternityPatientController::class,'storePatient'
 
 Route::get('maternitypregnant',[MaternityPregnantController::class,'getpage']);
 
+Route::get('/', function () {
+    return view('auth.login');
+})->name('login');
+
 Route::get('home', function () {
     return view('pages.dashboard');
-});
+})->name('home');

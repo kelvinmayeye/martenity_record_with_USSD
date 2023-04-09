@@ -35,8 +35,11 @@
               <td>{{ $maternityPatient->occupation }}</td>
               <td>{{ $maternityPatient->blood_group }}</td>
               <td>{{ $maternityPatient->phone_number }}</td>
-              <td></td>
+              <td> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+              </button> </td>
             </tr>
+            @include('modals.add-maternitypregnant')
             @endforeach
         </tbody>
       </table>
