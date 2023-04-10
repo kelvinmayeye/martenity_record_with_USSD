@@ -19,6 +19,7 @@ Route::get('patient/register',[MaternityPatientController::class,'registerPage']
 Route::post('patient/register',[MaternityPatientController::class,'storePatient']);
 
 Route::get('maternitypregnant',[MaternityPregnantController::class,'getpage']);
+Route::post('register/maternity/pregnant',[MaternityPregnantController::class,'store']);
 
 Route::get('/', function () {
     return view('auth.login');

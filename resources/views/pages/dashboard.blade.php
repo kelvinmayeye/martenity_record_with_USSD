@@ -8,7 +8,7 @@
                    <div class="media">
                        <div class="media-body">
                            <h3 class="mb-0">789</h3>
-                           <span class="text-uppercase font-size-xs font-weight-bold">Total Students</span>
+                           <span class="text-uppercase font-size-xs font-weight-bold">Total Patients</span>
                        </div>
 
                        <div class="ml-3 align-self-center">
@@ -23,7 +23,7 @@
                    <div class="media">
                        <div class="media-body">
                            <h3 class="mb-0">87</h3>
-                           <span class="text-uppercase font-size-xs">Total Installments</span>
+                           <span class="text-uppercase font-size-xs">Total Maternity</span>
                        </div>
 
                        <div class="ml-3 align-self-center">
@@ -42,7 +42,7 @@
 
                        <div class="media-body text-right">
                            <h3 class="mb-0">783</h3>
-                           <span class="text-uppercase font-size-xs">Other Payments</span>
+                           <span class="text-uppercase font-size-xs">Weekly Reported</span>
                        </div>
                    </div>
                </div>
@@ -57,7 +57,7 @@
 
                        <div class="media-body text-right">
                            <h3 class="mb-0">7893</h3>
-                           <span class="text-uppercase font-size-xs">Transport Payments</span>
+                           <span class="text-uppercase font-size-xs">Unattendend Reports</span>
                        </div>
                    </div>
                </div>
