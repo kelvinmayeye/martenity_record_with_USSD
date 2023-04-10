@@ -19,9 +19,9 @@
     <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
         <div class="d-flex">
             <div class="breadcrumb">
-                <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-                <a href="form_select2.html" class="breadcrumb-item">Forms</a>
-                <span class="breadcrumb-item active">Select2 selects</span>
+                <a href="{{ url('home') }}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                <a href="" class="breadcrumb-item">@yield('page_title')</a>
+                {{-- <span class="breadcrumb-item active">Select2 selects</span> --}}
             </div>
 
             <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>

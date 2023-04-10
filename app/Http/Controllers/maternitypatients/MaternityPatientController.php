@@ -9,7 +9,7 @@ use App\Models\maternitypatients\MaternityPatient;
 class MaternityPatientController extends Controller
 {
     public function registerPage(){
-        return view('pages.maternitypatients.register');
+        return view('pages.maternitypatients.register-patient');
     }
 
     public function storePatient(Request $request){

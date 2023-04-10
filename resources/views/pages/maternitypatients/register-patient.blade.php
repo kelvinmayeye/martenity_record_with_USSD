@@ -1,10 +1,14 @@
-@extends('layout.master')
+@extends('layouts.master')
+@section('page_title', 'Add Patient')
 @section('content')
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-            <h1 class="h2 mx-auto">Register Patients</h1>
-        </div>
-        <form action="" method="POST">
+
+<div class="card">
+    <div class="card-header bg-white header-elements-inline">
+        <h6 class="card-title">Please fill the form below to add Patient Information</h6>
+    </div>
+
+    <div class="p-3">
+        <form action="{{ url('patient/register') }}" method="POST">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-4">
@@ -54,5 +58,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
-    </main>
+    </div>
+</div>
+
 @endsection

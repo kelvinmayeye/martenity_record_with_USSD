@@ -53,8 +53,8 @@
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.parent', 'view.parents']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-users"></i> <span> Patients</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
-                        <li class="nav-item"><a href="" class="nav-link">Add Patient</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">All Patient</a></li>
+                        <li class="nav-item"><a href="{{ url('patient/register') }}" class="nav-link">Add Patient</a></li>
+                        <li class="nav-item"><a href="{{ url('all/patients') }}" class="nav-link">All Patient</a></li>
                     </ul>
                 </li>
 
