@@ -11,7 +11,7 @@ class MaternityPregnantController extends Controller
 {
     public function getpage(){
         $maternityPregnants = MaternityPregnant::all();
-        return view('pages.maternity-pregnant',compact('maternityPregnants'));
+        return view('pages.maternitypregnants.maternity-pregnant',compact('maternityPregnants'));
     }
 
     public function store(Request $request){
