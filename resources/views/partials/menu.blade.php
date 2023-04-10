@@ -87,7 +87,7 @@
                     </ul>
                 </li>
                     <li class="nav-item">
-                        <a href=""
+                        <a href="{{ url('reports') }}"
                             class="nav-link {{ in_array(Route::currentRouteName(), ['home', 'item']) ? 'active' : '' }}"><i
                                 class="icon-user"></i> <span>Reported issues</span></a>
                     </li>

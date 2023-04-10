@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\maternitypregnants\MaternityPregnantController;
 use App\Http\Controllers\maternitypatients\MaternityPatientController;
+use App\Http\Controllers\pregnantreports\PregnantReportContoller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::post('patient/register',[MaternityPatientController::class,'storePatient'
 
 Route::get('maternitypregnant',[MaternityPregnantController::class,'getpage']);
 Route::post('register/maternity/pregnant',[MaternityPregnantController::class,'store']);
+
+Route::get('reports',[PregnantReportContoller::class,'getReports']);
 
 Route::get('/', function () {
     return view('auth.login');
