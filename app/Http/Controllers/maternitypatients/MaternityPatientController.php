@@ -5,6 +5,7 @@ namespace App\Http\Controllers\maternitypatients;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\maternitypatients\MaternityPatient;
+use Illuminate\Support\Facades\Session;
 
 class MaternityPatientController extends Controller
 {
@@ -24,7 +25,8 @@ class MaternityPatientController extends Controller
     $patient->Phone_number = $request->PhoneNumber;
     // Save the patient to the database
     $patient->save();
-        return back();
+    Session::flash("success","New Patient added successful");
+    return back();
     }
 
     public function allPatients(){
