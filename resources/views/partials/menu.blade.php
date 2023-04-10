@@ -48,54 +48,50 @@
                     </a>
                 </li>
 
-                {{-- Parents --}}
+                {{-- Maternity Patient --}}
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.parent', 'view.parents']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span> Parents</span></a>
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span> Patients</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
-                        <li class="nav-item"><a href="" class="nav-link">Add Parents</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">View Parents</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Add Patient</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">All Patient</a></li>
                     </ul>
                 </li>
 
-                {{-- Students --}}
+                {{-- Maternity pregnant --}}
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.student', 'view.student']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span> Students</span></a>
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span> Maternity Pregnant</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
-                        <li class="nav-item"><a href="" class="nav-link">View Students</a>
+                        <li class="nav-item"><a href="" class="nav-link">Add maternity pregnant</a>
                         </li>
-                        <li class="nav-item"><a href="" class="nav-link">Grade Students</a>
+                        <li class="nav-item"><a href="" class="nav-link">All maternity pregnant</a>
                         </li>
                     </ul>
                 </li>
 
-                {{-- Installment --}}
+                {{-- Complication --}}
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.installments', 'view.installments']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span> Installments</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
-                        <li class="nav-item"><a href="" class="nav-link">Add
-                                Installments</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">All Payments</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Messeges</a></li>
+                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Complications</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
+                        <li class="nav-item"><a href="" class="nav-link">Add Complication</a></li>
                     </ul>
                 </li>
 
-                {{-- Transport --}}
+                {{-- Pregnant Complication --}}
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.installments', 'view.installments']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span> Transport</span></a>
+                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Pregnant Complications</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
-                        <li class="nav-item"><a href="" class="nav-link">Add
-                                Student Rate</a></li>
-
+                        <li class="nav-item"><a href="" class="nav-link">All pregnants complication</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Manage pregnant</a></li>
                     </ul>
                 </li>
                     <li class="nav-item">
                         <a href=""
                             class="nav-link {{ in_array(Route::currentRouteName(), ['home', 'item']) ? 'active' : '' }}"><i
-                                class="icon-user"></i> <span>Users Management</span></a>
+                                class="icon-user"></i> <span>Reported issues</span></a>
                     </li>
             </ul>
         </div>
