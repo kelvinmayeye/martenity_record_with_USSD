@@ -23,8 +23,11 @@ if ($text == "") {
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response = "CON Choose account information you want to view \n";
-    $response .= "1. Account number \n";
+    $response  = "CON Chagua Tatizo \n";
+    $response .= "1. Maumivu ya mgongo \n";
+    $response .= "2. Shinikizo la damu \n";
+    $response .= "3. Kuvimba miguu \n";
+    $response .= "4. Kutoka damu \n";
 
 } else if ($text == "2") {
     // Business logic for first level response
@@ -33,11 +36,8 @@ if ($text == "") {
 
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
-    $response  = "CON Karibu Ndugu katika menu kuu \n";
-    $response .= "1. Maumivu ya mgongo \n";
-    $response .= "2. Shinikizo la damu \n";
-    $response .= "3. Kuvimba miguu \n";
-    $response .= "4. Kutoka damu \n";
+    $response  = "END Pole \n";
+    $response .= "1. Taarifa zako zimetufikia \n";
 
 }
 
