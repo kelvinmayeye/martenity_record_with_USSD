@@ -36,8 +36,8 @@ if ($text == "") {
 
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
-    $response  = "END Pole \n";
-    $response .= "1. Taarifa zako zimetufikia \n";
+    $response  = "CON Pole kwa tatizo hilo \n";
+    $response .= "Taarifa zako zimetufikia maumivu yaki zidi fika hospitali yoyote karibu na wewe\n";
 
 }
 
