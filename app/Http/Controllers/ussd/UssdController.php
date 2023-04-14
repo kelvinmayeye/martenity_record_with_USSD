@@ -17,9 +17,9 @@ $text = $request->text;
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON What would you want to check \n";
-    $response .= "1. My Account \n";
-    $response .= "2. My phone number";
+    $response  = "CON Karibu Ndugu katika menu kuu \n";
+    $response .= "1. Ripoti Tatizo \n";
+    $response .= "2. Angalia Jibu la Ripoti";
 
 } else if ($text == "1") {
     // Business logic for first level response
@@ -33,10 +33,11 @@ if ($text == "") {
 
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
-    $accountNumber  = "ACC1001";
-
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Your account number is ".$accountNumber;
+    $response  = "CON Karibu Ndugu katika menu kuu \n";
+    $response .= "1. Maumivu ya mgongo \n";
+    $response .= "2. Shinikizo la damu \n";
+    $response .= "3. Kuvimba miguu \n";
+    $response .= "4. Kutoka damu \n";
 
 }
 
