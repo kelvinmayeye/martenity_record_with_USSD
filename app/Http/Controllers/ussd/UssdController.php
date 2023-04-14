@@ -20,6 +20,9 @@ if ($text == "") {
     $response  = "CON Karibu Ndugu katika menu kuu \n";
     $response .= "1. Ripoti Tatizo \n";
     $response .= "2. Angalia Jibu la Ripoti";
+    $response .= "3. Hakiki Taarifa";
+    $response .= "4. Pata ufipisho wa Ripoti";
+    $response .= "5. Sitisha";
 
 } else if ($text == "1") {
     // Business logic for first level response
@@ -34,6 +37,20 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Your phone number is ".$phoneNumber;
 
+} else if ($text == "3") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Your phone number is ".$phoneNumber;
+
+} else if ($text == "4") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Your phone number is ".$phoneNumber;
+
+} else if ($text == "5") {
+
+    $response = "END Asante Kwa heri";
+
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
     $response  = "END Pole kwa tatizo hilo \n";
@@ -43,6 +60,16 @@ if ($text == "") {
     // This is a second level response where the user selected 1 in the first instance
     $response  = "END Pole kwa shida hio \n";
     $response .= "Una shauriwa kufika hospitali mapema \n";
+
+} else if($text == "1*3") {
+    // This is a second level response where the user selected 1 in the first instance
+    $response  = "END Pole kwa shida hio \n";
+    $response .= "Jitahidi kufanya mazoezi lakini maumivu yakizidi fika hospitali \n";
+
+} else if($text == "1*4") {
+    // This is a second level response where the user selected 1 in the first instance
+    $response  = "END Pole kwa shida hio \n";
+    $response .= "Una shauriwa kufika hospitali upesi \n";
 
 }
 
