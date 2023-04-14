@@ -3,29 +3,32 @@
     border-collapse: collapse;
 }
 
-.navbar-backgoundcolor{
-    background-color: #461111;
+.navbar-backgoundcolor {
+    background-color: #00337C;
 }
 
-body {font-size: 15px!important}
+body {
+    font-size: 15px !important
+}
 
 .hide {
     display: none;
-  }
-      
-  .myDIV:hover + .hide {
+}
+
+.myDIV:hover+.hide {
     display: block;
     color: rgb(61, 61, 61);
-  }
-
-.overflow_x{
-  overflow-x:auto;
 }
 
-.overflow_y{
-  height: 300px;
-  overflow-y: auto;
+.overflow_x {
+    overflow-x: auto;
 }
+
+.overflow_y {
+    height: 300px;
+    overflow-y: auto;
+}
+
 .fw {
-  font-weight: 800;
+    font-weight: 800;
 }

@@ -5,10 +5,8 @@ namespace App\Http\Controllers\ussd;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UssdController extends Controller
-{
+class UssdController extends Controller{
     public function startUssd(Request $request){
-
 // Read the variables sent via POST from our API
 $sessionId   = $request->sessionId;
 $serviceCode = $request->serviceCode;
