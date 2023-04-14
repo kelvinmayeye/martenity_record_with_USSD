@@ -19,9 +19,9 @@ if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Karibu Ndugu katika menu kuu \n";
     $response .= "1. Ripoti Tatizo \n";
-    $response .= "2. Angalia Jibu la Ripoti";
-    $response .= "3. Hakiki Taarifa";
-    $response .= "4. Pata ufipisho wa Ripoti";
+    $response .= "2. Angalia Jibu la Ripoti \n";
+    $response .= "3. Hakiki Taarifa \n";
+    $response .= "4. Pata ufipisho wa Ripoti \n";
     $response .= "5. Sitisha";
 
 } else if ($text == "1") {
