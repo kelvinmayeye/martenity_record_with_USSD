@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('ussd',[UssdContoller::class,'startUssd']);
+Route::get('ussd',[UssdController::class,'startUssd']);
