@@ -33,19 +33,15 @@ if ($text == "") {
     $response .= "4. Kutoka damu \n";
 
 } else if ($text == "2") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Your phone number is ".$phoneNumber;
+    $response = "END Angalia jibu la ripoti";
 
 } else if ($text == "3") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Your phone number is ".$phoneNumber;
+    $response = "END Jina fulani kanani namba ya simu 0765122900 usajili wa uzazi ni mara 2.";
 
 } else if ($text == "4") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Your phone number is ".$phoneNumber;
+    $response  = "END Tariafaa fupi za ripoti \n";
+    $response .= "1. Maumivu ya mgongo \n";
+    $response .= "2. Shinikizo la damu";
 
 } else if ($text == "5") {
 
