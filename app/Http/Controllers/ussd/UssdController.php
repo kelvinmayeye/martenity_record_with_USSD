@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ussd;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\pregnantreports\PregnantReport;
+use App\Models\maternitypatients\MaternityPatient;
 
 class UssdController extends Controller{
     public function startUssd(Request $request){
@@ -56,8 +57,7 @@ if ($text == "") {
     // This is a second level response where the user selected 1 in the first instance
     $phoneNumber = ltrim($phoneNumber, '+');
 
-    $user = DB::table('maternity_pregnant')
-            ->where('phone_number', $phoneNumber)
+    $user = MaternityPatient::where('phone_number', $phoneNumber)
             ->first(['id', 'username']);
 
             if ($user > 0) {
