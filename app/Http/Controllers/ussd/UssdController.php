@@ -59,41 +59,9 @@ if ($text == "") {
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
     $phoneNumber = ltrim($phoneNumber, '+');
+    $problem = "Maumivu ya mgongo";
+    $response = sendReport($phoneNumber,$problem);
 
-    $user = MaternityPatient::where('phone_number', $phoneNumber)
-            ->first(['id', 'first_name','middle_name','last_name']);
-
-            if ($user) {
-                $id = $user->id;
-                $username = $user->fullname;
-                //insert the report
-                $maternity_pregnant = DB::table('maternity_pregnant')
-                ->where('maternity_patient_id', $id)
-                ->orderBy('id', 'desc')
-                ->first(['id']);
-                if($maternity_pregnant){
-                $maternity_pregnant_Id = $maternity_pregnant->id;
-
-                $report = new PregnantReport();
-                $report->maternity_pregnant_id = $maternity_pregnant_Id;
-                $report->issue = "Maumivu ya mgongo";
-                $report->is_attended = 0;
-                $report->save();
-
-                // do something with the id and username
-                $response  = "END Pole kwa tatizo hilo ".$username." \n";
-                $response .= "Taarifa zako zimetufikia maumivu yaki zidi fika hospitali yoyote karibu na wewe\n";
-
-                } else {
-                    // do something with the id and username
-                $response  = "END Pole kwa tatizo hilo ".$username." \n";
-                $response .= "Taarifa fika kituo cha afya chochote kuhakiki taarifa zako\n";
-                }
-
-
-            } else {
-                $response  = "END Samahani system haikutambui \n";
-            }
 
 } else if($text == "1*2") {
     // This is a second level response where the user selected 1 in the first instance
