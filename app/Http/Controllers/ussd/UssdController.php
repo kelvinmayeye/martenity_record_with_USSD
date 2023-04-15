@@ -16,7 +16,7 @@ $text = $request->text;
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Karibu Ndugu katika menu kuu \n";
+    $response  = "CON Karibu Ndugu ".$phoneNumber." menu kuu \n";
     $response .= "1. Ripoti Tatizo \n";
     $response .= "2. Angalia Jibu la Ripoti \n";
     $response .= "3. Hakiki Taarifa \n";
