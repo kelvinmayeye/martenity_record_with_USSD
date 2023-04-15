@@ -58,13 +58,15 @@ if ($text == "") {
     $phoneNumber = ltrim($phoneNumber, '+');
 
     $user = MaternityPatient::where('phone_number', $phoneNumber)
-            ->first(['id', 'username']);
+            ->first(['id', 'first_name','middle_name','last_name']);
 
-            if ($user > 0) {
+            if ($user) {
                 $id = $user->id;
-                $username = $user->username;
+                $username = $user->fullname;
+                //insert the report
+
                 // do something with the id and username
-                $response  = "END Pole kwa tatizo hilo ".$user->username." \n";
+                $response  = "END Pole kwa tatizo hilo ".$username." \n";
                 $response .= "Taarifa zako zimetufikia maumivu yaki zidi fika hospitali yoyote karibu na wewe\n";
             } else {
                 $response  = "END Samahani system haikutambui \n";
