@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('pregnant_reports', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('maternity_pregnant_id');
-            $table->bigInteger('sub_complication_id');
             $table->text('issue');
             $table->smallInteger('is_attended')->default(0);
             $table->timestamps();

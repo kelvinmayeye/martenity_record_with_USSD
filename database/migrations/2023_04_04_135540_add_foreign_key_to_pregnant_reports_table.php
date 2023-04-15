@@ -15,10 +15,7 @@ return new class extends Migration
     {
         Schema::table('pregnant_reports', function (Blueprint $table) {
             $table->bigInteger('maternity_pregnant_id')->unsigned()->change();
-            $table->bigInteger('sub_complication_id')->unsigned()->change();
-
             $table->foreign('maternity_pregnant_id')->references('id')->on('maternity_pregnant')->onDelete('restrict');
-            $table->foreign('sub_complication_id')->references('id')->on('sub_complication')->onDelete('restrict');
         });
     }
 
