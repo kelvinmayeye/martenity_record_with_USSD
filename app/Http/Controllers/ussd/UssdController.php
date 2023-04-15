@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ussd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\pregnantreports\PregnantReport;
 
 class UssdController extends Controller{
     public function startUssd(Request $request){
