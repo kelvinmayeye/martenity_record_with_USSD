@@ -31,7 +31,13 @@ if ($text == "") {
     $response .= "4. Kutoka damu \n";
 
 } else if ($text == "2") {
-    $response = "END Angalia jibu la ripoti";
+    $reports = PregnantReport::find(1);
+    if($reports == 0){
+        $response = "END hauna taarifa yoyote";
+    }else{
+        $response = "END Taarifa zako ni hizo";
+    }
+
 
 } else if ($text == "3") {
     $response = "END Jina fulani kanani namba ya simu 0765122900 usajili wa uzazi ni mara 2.";
