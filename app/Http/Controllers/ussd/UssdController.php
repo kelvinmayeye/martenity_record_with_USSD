@@ -54,8 +54,21 @@ if ($text == "") {
 
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
-    $response  = "END Pole kwa tatizo hilo \n";
-    $response .= "Taarifa zako zimetufikia maumivu yaki zidi fika hospitali yoyote karibu na wewe\n";
+    $phoneNumber = ltrim($phoneNumber, '+');
+
+    $user = DB::table('maternity_pregnant')
+            ->where('phone_number', $phoneNumber)
+            ->first(['id', 'username']);
+
+            if ($user > 0) {
+                $id = $user->id;
+                $username = $user->username;
+                // do something with the id and username
+                $response  = "END Pole kwa tatizo hilo ".$user->username." \n";
+                $response .= "Taarifa zako zimetufikia maumivu yaki zidi fika hospitali yoyote karibu na wewe\n";
+            } else {
+                $response  = "END Samahani system haikutambui \n";
+            }
 
 } else if($text == "1*2") {
     // This is a second level response where the user selected 1 in the first instance
