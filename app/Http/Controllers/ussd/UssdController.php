@@ -40,7 +40,7 @@ if ($text == "") {
     $response = checkReportStatus($phoneNumber);
 
 } else if ($text == "3") {
-    $response = "END Jina fulani kanani namba ya simu 0765122900 usajili wa uzazi ni mara 2.";
+    $response = getUserInformations($phoneNumber);
 
 } else if ($text == "4") {
     $response  = "END Tariafaa fupi za ripoti \n";

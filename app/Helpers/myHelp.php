@@ -90,3 +90,16 @@ $userNotRegistered = "Samahani Namba hii ya simu haipo kwenye mfumo fika hospita
 
         return $response = "END ujumbe kutoka ripoti zilizo pita \n".$replies;
 }
+
+function getUserInformations($phoneNumber){
+
+    $user = MaternityPatient::where('phone_number', $phoneNumber)
+            ->first();
+
+    if ($user) {
+        $response = 'END Utapokea ujumbe mfupi pokea ujumbe mfupi wenye taarifa zako.';
+    }else{
+        $response = "END Samahani namba hii haipo kwenye orodha ya wasajiliwa fika hospitali kuhakii taarifa zao.";
+    }
+    return $response;
+}
