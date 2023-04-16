@@ -13,7 +13,7 @@ class UssdController extends Controller{
 // Read the variables sent via POST from our API
 $sessionId   = $request->sessionId;
 $serviceCode = $request->serviceCode;
-$phoneNumber = $request->phoneNumber;
+$phoneNumber = ltrim($request->phoneNumber, '+');
 $text = $request->text;
 
 if ($text == "") {
@@ -36,13 +36,8 @@ if ($text == "") {
     $response .= "6. Kuvimba miguu,uso au mikono \n";
 
 } else if ($text == "2") {
-    $reports = PregnantReport::find(1);
-    if($reports == 0){
-        $response = "END hauna taarifa yoyote";
-    }else{
-        $response = "END Taarifa zako ni hizo";
-    }
 
+    $response = checkReportStatus($phoneNumber);
 
 } else if ($text == "3") {
     $response = "END Jina fulani kanani namba ya simu 0765122900 usajili wa uzazi ni mara 2.";
@@ -58,25 +53,33 @@ if ($text == "") {
 
 } else if($text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
-    $phoneNumber = ltrim($phoneNumber, '+');
     $problem = "Maumivu ya mgongo";
     $response = sendReport($phoneNumber,$problem);
 
 
 } else if($text == "1*2") {
     // This is a second level response where the user selected 1 in the first instance
-    $response  = "END Pole kwa shida hio \n";
-    $response .= "Una shauriwa kufika hospitali mapema \n";
+    $problem = "Homa kali";
+    $response = sendReport($phoneNumber,$problem);
 
 } else if($text == "1*3") {
     // This is a second level response where the user selected 1 in the first instance
-    $response  = "END Pole kwa shida hio \n";
-    $response .= "Jitahidi kufanya mazoezi lakini maumivu yakizidi fika hospitali \n";
-
+    $problem = "Maumivu chini ya tumbo";
+    $response = sendReport($phoneNumber,$problem);
 } else if($text == "1*4") {
     // This is a second level response where the user selected 1 in the first instance
-    $response  = "END Pole kwa shida hio \n";
-    $response .= "Una shauriwa kufika hospitali upesi \n";
+    $problem = "Kutoka damu";
+    $response = sendReport($phoneNumber,$problem);
+
+} else if($text == "1*5") {
+    // This is a second level response where the user selected 1 in the first instance
+    $problem = "Uchungu Kabla";
+    $response = sendReport($phoneNumber,$problem);
+
+} else if($text == "1*6") {
+    // This is a second level response where the user selected 1 in the first instance
+    $problem = "Kuvimba miguu,uso au mikono";
+    $response = sendReport($phoneNumber,$problem);
 
 }
 

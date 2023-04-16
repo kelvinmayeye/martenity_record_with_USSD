@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\maternitypatients\MaternityPatient;
+use App\Models\pregnantreports\PregnantReport;
 
 class MaternityPregnant extends Model
 {
@@ -19,5 +20,9 @@ class MaternityPregnant extends Model
 
     public function getDueDateAttribute(){
         return Carbon::parse($this->attributes['due_date'])->toFormattedDateString();
+    }
+
+    public function pregnantReports(){
+        return $this->hasMany(PregnantReport::class);
     }
 }
