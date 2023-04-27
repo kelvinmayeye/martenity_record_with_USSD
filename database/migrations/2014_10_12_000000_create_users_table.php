@@ -24,8 +24,6 @@ return new class extends Migration
             $table->string('phone_number');
             $table->smallInteger('type')->default(0);
             $table->smallInteger('role')->default(0);
-            $table->rememberToken();
-            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
     }
