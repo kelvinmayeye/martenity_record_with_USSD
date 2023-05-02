@@ -17,7 +17,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Maternity Type <span class="text-danger">*</span></label>
-                                <select class="form-control" name="maternity_type">
+                                <select class="form-control" name="maternity_type" required>
                                     <option selected disabled>Select....</option>
                                     <option value="Prenatal">Prenatal</option>
                                     <option value="Postnatal">Postnatal</option>
@@ -27,7 +27,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>weight:</label><span class="text-danger">*</span></label>
+                                <label>weight:</label><span class="text-danger"></span></label>
                                 <input type="text" name="weight" class="form-control"
                                     pattern="^\d{1,3}(\.\d{1,2})?$" placeholder="eg.78.09">
 
@@ -36,7 +36,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Description</label><span class="text-danger">*</span></label>
+                                <label>Description</label><span class="text-danger"></span></label>
                                 <textarea name="description" cols="10" rows="3" class="form-control"></textarea>
                             </div>
                         </div>

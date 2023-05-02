@@ -10,6 +10,13 @@ use App\Models\maternityattendances\MaternityAttendance;
 class MaternityAttendancesController extends Controller
 {
     public function store(Request $request){
+        $this->validate($request, [
+            'maternity_pregnant_id' => 'required|numeric',
+            'maternity_type' => 'required|numeric',
+            'weight' => 'nullable|numeric|min:0|max:999.99',
+            'description' => 'nullable|string',
+        ]);
+        
         $attendence = new MaternityAttendance();
         $attendence->maternity_pregnant_id = $request->maternity_pregnant_id;
         $attendence->type = $request->maternity_type;

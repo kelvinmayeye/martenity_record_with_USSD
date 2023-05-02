@@ -5,6 +5,7 @@ use App\Http\Controllers\maternitypregnants\MaternityPregnantController;
 use App\Http\Controllers\maternitypatients\MaternityPatientController;
 use App\Http\Controllers\pregnantreports\PregnantReportContoller;
 use App\Http\Controllers\maternityattendances\MaternityAttendancesController;
+use App\Http\Controllers\complications\ComplicationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,12 @@ Route::get('reports',[PregnantReportContoller::class,'getReports']);
 
 // attendence
 Route::post('maternity/attendence',[MaternityAttendancesController::class,'store']);
+
+//complication
+Route::get('add/complication',[ComplicationsController::class,'getAddComplication']);
+Route::post('add/complication',[ComplicationsController::class,'store']);
+
+
 
 
 
