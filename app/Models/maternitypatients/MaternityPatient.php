@@ -4,7 +4,7 @@ namespace App\Models\maternitypatients;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\maternitypregnant\MaternityPregnant;
+use App\Models\maternitypregnants\MaternityPregnant;
 
 class MaternityPatient extends Model
 {

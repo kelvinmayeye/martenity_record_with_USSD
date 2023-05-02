@@ -53,7 +53,8 @@
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.parent', 'view.parents']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-users"></i> <span> Patients</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="">
-                        <li class="nav-item"><a href="{{ url('patient/register') }}" class="nav-link">Add Patient</a></li>
+                        <li class="nav-item"><a href="{{ url('patient/register') }}" class="nav-link">Add Patient</a>
+                        </li>
                         <li class="nav-item"><a href="{{ url('all/patients') }}" class="nav-link">All Patient</a></li>
                     </ul>
                 </li>
@@ -63,7 +64,8 @@
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.student', 'view.student']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-users"></i> <span> Maternity Pregnant</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="">
-                        <li class="nav-item"><a href="{{ url('maternitypregnant') }}" class="nav-link">All maternity pregnant</a>
+                        <li class="nav-item"><a href="{{ url('maternitypregnant') }}" class="nav-link">All maternity
+                                pregnant</a>
                         </li>
                     </ul>
                 </li>
@@ -80,17 +82,18 @@
                 {{-- Pregnant Complication --}}
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.installments', 'view.installments']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Pregnant Complications</span></a>
+                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Pregnant
+                            Complications</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="">
                         <li class="nav-item"><a href="" class="nav-link">All pregnants complication</a></li>
                         <li class="nav-item"><a href="" class="nav-link">Manage pregnant</a></li>
                     </ul>
                 </li>
-                    <li class="nav-item">
-                        <a href="{{ url('reports') }}"
-                            class="nav-link {{ in_array(Route::currentRouteName(), ['home', 'item']) ? 'active' : '' }}"><i
-                                class="icon-user"></i> <span>Reported issues</span></a>
-                    </li>
+                <li class="nav-item">
+                    <a href="{{ url('reports') }}"
+                        class="nav-link {{ in_array(Route::currentRouteName(), ['home', 'item']) ? 'active' : '' }}"><i
+                            class="icon-user"></i> <span>Reported issues</span></a>
+                </li>
             </ul>
         </div>
     </div>

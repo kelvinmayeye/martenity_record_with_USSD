@@ -5,7 +5,7 @@
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title">All Parents</h5>
+            <h5 class="card-title">All Patients</h5>
         </div>
 
         <div class="card-body">
@@ -31,7 +31,7 @@
                             <td>{{ $maternityPatient->occupation }}</td>
                             <td>{{ $maternityPatient->blood_group }}</td>
                             <td>{{ $maternityPatient->phone_number }}</td>
-                            <td></td>
+                            <td>{{ $maternityPatient->maternityPregnant->count() }}</td>
                             <td>
                                 <div class="list-icons text-center">
                                     <div class="dropdown">
@@ -39,8 +39,8 @@
                                             <i class="icon-menu9"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-left">
-                                            <a href="#" data-toggle="modal" data-target="#{{ $maternityPatient->id }}Modal"
-                                                class="dropdown-item">
+                                            <a href="#" data-toggle="modal"
+                                                data-target="#{{ $maternityPatient->id }}Modal" class="dropdown-item">
                                                 <i class="icon-plus3"></i>Register maternity</a>
 
                                             <a href="#" data-toggle="modal" data-target=".bd-edit-modal-lg"
