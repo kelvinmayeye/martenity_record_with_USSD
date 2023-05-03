@@ -46,4 +46,9 @@ class ComplicationsController extends Controller
         Session::flash('success', 'added successfully.');
         return back();
     }
+
+    public function storePregnantComplication(Request $request){
+        
+        return back();
+    }
 }

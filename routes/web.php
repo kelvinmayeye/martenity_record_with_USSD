@@ -36,6 +36,7 @@ Route::post('add/complication',[ComplicationsController::class,'store']);
 
 Route::get('all/complication',[ComplicationsController::class,'getAllComplication']);
 Route::post('add/sub',[ComplicationsController::class,'storeSubComplication']);
+Route::post('add/pregnant/complication',[ComplicationsController::class,'storePregnantComplication']);
 
 
 

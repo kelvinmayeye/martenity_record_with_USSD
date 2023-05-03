@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\maternitypregnants\MaternityPregnant;
 use Illuminate\Support\Facades\Session;
+use App\Models\complications\SubComplication;
 
 class MaternityPregnantController extends Controller
 {
     public function getpage(){
         $maternityPregnants = MaternityPregnant::all();
-        return view('pages.maternitypregnants.maternity-pregnant',compact('maternityPregnants'));
+        $subComplications = SubComplication::all();
+        return view('pages.maternitypregnants.maternity-pregnant',compact('maternityPregnants','subComplications'));
     }
 
     public function store(Request $request){

@@ -47,10 +47,15 @@
                                             <a href="#" data-toggle="modal"
                                                 data-target="#{{ $maternityPregnant->id }}Attend" class="dropdown-item">
                                                 <i class="icon-plus3"></i>Attend</a>
+
+                                            <a href="#" data-toggle="modal"
+                                                data-target="#{{ $maternityPregnant->id }}PregnantComplication" class="dropdown-item">
+                                                <i class="icon-plus3"></i>Complication</a>
                                         </div>
                                     </div>
                                 </div>
                                 @include('partials.modals.add_attend')
+                                @include('partials.modals.add_maternity_complication')
                             </td>
                         </tr>
                     @endforeach
