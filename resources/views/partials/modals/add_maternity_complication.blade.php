@@ -18,7 +18,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Complication <span class="text-danger">*</span></label>
-                                <select class="form-control" name="maternity_type" required>
+                                <select class="form-control" name="complication" required>
                                     <option selected disabled>Select complication</option>
                                     @foreach ($subComplications as $subComplication)
                                         <option value="{{ $subComplication->id }}">{{ $subComplication->name }}</option>

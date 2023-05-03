@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Models\complications\Complication;
 use App\Models\complications\SubComplication;
+use App\Models\pregnantcomplications\PregnantComplication;
 
 class ComplicationsController extends Controller
 {
@@ -48,7 +49,11 @@ class ComplicationsController extends Controller
     }
 
     public function storePregnantComplication(Request $request){
-        
+        $pregnantComplication = new PregnantComplication();
+        $pregnantComplication->maternity_pregnant_id = $request->maternity_pregnant_id;
+        $pregnantComplication->sub_complication_id  = $request->complication;
+        $pregnantComplication->save();
+        Session::flash('success', 'added successfully.');
         return back();
     }
 }
