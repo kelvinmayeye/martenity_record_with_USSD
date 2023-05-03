@@ -75,8 +75,17 @@
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.installments', 'view.installments']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Complications</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
+                        <li class="nav-item">
+                            <a href="{{ url('add/complication') }}" class="nav-link">Maternity Pregnant</a>
+                        </li>
+
                         <li class="nav-item"><a href="{{ url('add/complication') }}" class="nav-link">Add
                                 Complication</a></li>
+
+                        <li class="nav-item">
+                            <a href="{{ url('all/complication') }}" class="nav-link">
+                                All Complication</a>
+                        </li>
                     </ul>
                 </li>
 
