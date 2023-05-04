@@ -39,8 +39,8 @@
                                                 <div class="dropdown-menu dropdown-menu-left">
 
                                                     <a href="" class="dropdown-item" data-toggle="modal"
-                                                        data-target="#flipFlop{{ $user->id }}">
-                                                        <i class="icon-pencil"></i>Change Role</a>
+                                                        data-target="#addUserSpecializationModal{{ $user->id }}">
+                                                        <i class="icon-plus2"></i>Specialization</a>
 
 
                                                     <button type="submit" class="dropdown-item"><i class="icon-lock"></i>
@@ -59,8 +59,8 @@
                                         </div>
                                     </td>
 
-                                    {{-- @include('partials.modals.change_user_role')
-                                    @include('partials.modals.delete_user_confirmation') --}}
+                                    @include('partials.modals.add_user_specialization')
+                                    {{-- @include('partials.modals.delete_user_confirmation') --}}
                                 </tr>
                             @endforeach
                         </tbody>

@@ -43,6 +43,9 @@ Route::post('add/pregnant/complication',[ComplicationsController::class,'storePr
 Route::get('all/users',[UsersController::class,'getAllUsers']);
 Route::post('all/users',[UsersController::class,'store']);
 
+//users specialization
+Route::post('add/user/specialization',[UsersController::class,'addUserSpecialization']);
+
 
 
 
