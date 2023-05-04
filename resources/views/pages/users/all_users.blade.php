@@ -26,7 +26,11 @@
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $user->fullname }}</td>
                                     <td>{{ $user->sex }}</td>
-                                    <td>{{ $user->specialist->specialization->name }}</td>
+                                    <td>
+                                        @if (optional($user->specialist)->count() != 0)
+                                            {{ $user->specialist->specialization->name }}
+                                        @endif
+                                    </td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone_number }}</td>
                                     <td class="text-center">

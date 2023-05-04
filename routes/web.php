@@ -18,6 +18,8 @@ use App\Http\Controllers\users\UsersController;
 |
 */
 
+
+Route::middleware("auth")->group(function(){
 Route::get('all/patients',[MaternityPatientController::class,'allPatients']);
 Route::get('patient/register',[MaternityPatientController::class,'registerPage']);
 Route::post('patient/register',[MaternityPatientController::class,'storePatient']);
@@ -46,6 +48,17 @@ Route::post('all/users',[UsersController::class,'store']);
 //users specialization
 Route::post('add/user/specialization',[UsersController::class,'addUserSpecialization']);
 
+Route::post('logout',[UsersController::class,'logout']);
+
+Route::get('home', function () {
+    return view('pages.dashboard');
+})->name('home');
+
+});
+//user login
+Route::post('login',[UsersController::class,'login']);
+
+
 
 
 
@@ -53,7 +66,3 @@ Route::post('add/user/specialization',[UsersController::class,'addUserSpecializa
 Route::get('/', function () {
     return view('auth.login');
 })->name('login');
-
-Route::get('home', function () {
-    return view('pages.dashboard');
-})->name('home');
