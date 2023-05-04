@@ -26,7 +26,7 @@
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $user->fullname }}</td>
                                     <td>{{ $user->sex }}</td>
-                                    <td></td>
+                                    <td>{{ $user->specialist->specialization->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone_number }}</td>
                                     <td class="text-center">
@@ -43,9 +43,9 @@
                                                         <i class="icon-plus2"></i>Specialization</a>
 
 
-                                                    <button type="submit" class="dropdown-item"><i class="icon-lock"></i>
+                                                    {{-- <button type="submit" class="dropdown-item"><i class="icon-lock"></i>
                                                         Reset
-                                                        password</button>
+                                                        password</button> --}}
 
 
                                                     {{-- Delete --}}
