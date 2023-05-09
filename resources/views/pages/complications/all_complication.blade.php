@@ -39,6 +39,9 @@
                                             <a href="#" data-toggle="modal"
                                                 data-target="#{{ $complication->id }}Complication" class="dropdown-item">
                                                 <i class="icon-plus3"></i>sub complication</a>
+                                            <a href="#" data-toggle="modal"
+                                                data-target="#" class="dropdown-item">
+                                                <i class="icon-plus3"></i>view complications</a>
                                         </div>
                                     </div>
                                 </div>

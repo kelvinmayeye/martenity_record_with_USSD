@@ -76,10 +76,7 @@
                     <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Complications</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
                         <li class="nav-item">
-                            <a href="{{ url('add/complication') }}" class="nav-link">Maternity Pregnant</a>
-                        </li>
-
-                        <li class="nav-item"><a href="{{ url('add/complication') }}" class="nav-link">Add
+                            <a href="{{ url('add/complication') }}" class="nav-link">Add
                                 Complication</a></li>
 
                         <li class="nav-item">

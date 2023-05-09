@@ -46,6 +46,9 @@
                                             <a href="#" data-toggle="modal" data-target=".bd-edit-modal-lg"
                                                 class="dropdown-item">
                                                 <i class="icon-pencil7"></i>View Profile</a>
+
+                                            <a href="#" data-toggle="modal" data-target="" class="dropdown-item">
+                                                <i class="icon-trash"></i>Delete</a>
                                         </div>
                                     </div>
                                 </div>
