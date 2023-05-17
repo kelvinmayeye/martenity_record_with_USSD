@@ -77,7 +77,8 @@
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
                         <li class="nav-item">
                             <a href="{{ url('add/complication') }}" class="nav-link">Add
-                                Complication</a></li>
+                                Complication</a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="{{ url('all/complication') }}" class="nav-link">
@@ -91,10 +92,25 @@
                             class="icon-user"></i> <span>Reported issues</span></a>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ url('all/users') }}"
                         class="nav-link {{ in_array(Route::currentRouteName(), ['item']) ? 'active' : '' }}"><i
                             class="icon-user"></i> <span>Users Management</span></a>
+                </li> --}}
+
+                <li
+                    class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['', '']) ? 'nav-item-expanded nav-item-open' : '' }} ">
+                    <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Users Managements</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
+                        <li class="nav-item">
+                            <a href="{{ url('all/users') }}" class="nav-link">All Users</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                Add Specialization</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
