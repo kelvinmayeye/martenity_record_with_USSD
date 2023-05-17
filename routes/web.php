@@ -54,9 +54,7 @@ Route::post('add/user/specialization',[UsersController::class,'addUserSpecializa
 
 Route::post('logout',[UsersController::class,'logout']);
 
-Route::get('home', function () {
-    return view('pages.dashboard');
-})->name('home');
+Route::get('home',[UsersController::class,'dashboard'])->name('home');
 
 //reply-report
 Route::post('reply/report',[PregnantReportContoller::class,'storeReply']);

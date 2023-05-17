@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\specializations\Specialization;
 use App\Models\specializations\Specialist;
+use App\Models\maternitypregnants\MaternityPregnant;
+use App\Models\pregnantreports\PregnantReport;
 
 class UsersController extends Controller
 {
@@ -102,4 +104,10 @@ class UsersController extends Controller
         }
         
     }
+
+    public function dashboard(){
+        $undeliveredPatients = MaternityPregnant::where('is_delivered', 0)->get();
+        $unattendedReports = PregnantReport::where('is_attended', 0)->get();
+        return view('pages.dashboard',compact('undeliveredPatients','unattendedReports'));
+    } 
 }
