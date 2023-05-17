@@ -104,7 +104,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{ url('add/specialization') }}" class="nav-link">
                                 Add Specialization</a>
                         </li>
                     </ul>

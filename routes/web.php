@@ -7,6 +7,7 @@ use App\Http\Controllers\pregnantreports\PregnantReportContoller;
 use App\Http\Controllers\maternityattendances\MaternityAttendancesController;
 use App\Http\Controllers\complications\ComplicationsController;
 use App\Http\Controllers\users\UsersController;
+use App\Http\Controllers\specializations\SpecializationsController;
 
 
 
@@ -60,16 +61,20 @@ Route::get('home', function () {
 Route::post('reply/report',[PregnantReportContoller::class,'storeReply']);
 Route::get('view/replay/{id}',[PregnantReportContoller::class,'viewReply']);
 
+//Specialization
+Route::post('add/specialization',[SpecializationsController::class,'store']);
+Route::get('add/specialization',[SpecializationsController::class,'addSpecialization']);
+
 
 });
+
+
+
+
+
+
 //user login
 Route::post('login',[UsersController::class,'login']);
-
-
-
-
-
-
 Route::get('/', function () {
     return view('auth.login');
 })->name('login');
