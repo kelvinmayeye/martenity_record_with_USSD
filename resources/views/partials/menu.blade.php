@@ -71,6 +71,7 @@
                 </li>
 
                 {{-- Complication --}}
+                @if(auth()->user()->specialist)
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.installments', 'view.installments']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Complications</span></a>
@@ -86,18 +87,15 @@
                         </li>
                     </ul>
                 </li>
+                @endif
                 <li class="nav-item">
                     <a href="{{ url('reports') }}"
                         class="nav-link {{ in_array(Route::currentRouteName(), ['item']) ? 'active' : '' }}"><i
                             class="icon-user"></i> <span>Reported issues</span></a>
                 </li>
 
-                {{-- <li class="nav-item">
-                    <a href="{{ url('all/users') }}"
-                        class="nav-link {{ in_array(Route::currentRouteName(), ['item']) ? 'active' : '' }}"><i
-                            class="icon-user"></i> <span>Users Management</span></a>
-                </li> --}}
-
+                @if(auth()->user()->role == 1)
+                {{-- User management --}}
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Users Managements</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
@@ -111,6 +109,7 @@
                         </li>
                     </ul>
                 </li>
+                @endif
             </ul>
         </div>
     </div>

@@ -34,4 +34,11 @@ class PregnantReportContoller extends Controller
         Session::flash('error','Failed to reply please try again');
         return back();
     }
+
+
+    public function viewReply($id){
+        $replies = PregnantReportReply::where('pregnant_report_id',$id)->get();
+        $report = PregnantReport::find($id)->first();
+        return view('pages.reportreplies.view_report_reply',compact('replies','report'));
+    }
 }

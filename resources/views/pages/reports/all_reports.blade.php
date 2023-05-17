@@ -44,8 +44,7 @@
                                                     <i class="icon-plus3"></i>Reply
                                                 </a>
                                             @endif
-                                            <a href="#" data-toggle="modal" data-target=".bd-edit-modal-lg"
-                                                class="dropdown-item">
+                                            <a href="{{ url('view/replay/'.$pregnantReport->id ) }}" class="dropdown-item">
                                                 <i class="icon-pencil7"></i>View Reply</a>
                                         </div>
                                     </div>

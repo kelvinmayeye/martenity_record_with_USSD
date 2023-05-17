@@ -58,6 +58,8 @@ Route::get('home', function () {
 
 //reply-report
 Route::post('reply/report',[PregnantReportContoller::class,'storeReply']);
+Route::get('view/replay/{id}',[PregnantReportContoller::class,'viewReply']);
+
 
 });
 //user login
