@@ -21,7 +21,7 @@
                     @foreach ($pregnantReport as $key => $pregnantReport)
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
-                            <td>{{ $pregnantReport->maternity_pregnant_id }}</td>
+                            <td>{{ $pregnantReport->maternityPregnant->maternityPatient->fullname }}</td>
                             <td>{{ $pregnantReport->issue }}</td>
                             <td>{{ $pregnantReport->is_attended }}</td>
                             <td>

@@ -115,7 +115,7 @@ function sendDetailsSms(){
         'source_addr' => 'INFO',
         'encoding'=>0,
         'schedule_time' => '',
-        'message' => 'Hello World',
+        'message' => 'Hello, Sms from maternity app(Dev)',
         'recipients' => [array('recipient_id' => '255672995073','dest_addr'=>'255672995073')]
     );
 

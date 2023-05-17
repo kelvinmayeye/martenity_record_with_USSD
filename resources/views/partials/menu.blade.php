@@ -98,8 +98,7 @@
                             class="icon-user"></i> <span>Users Management</span></a>
                 </li> --}}
 
-                <li
-                    class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['', '']) ? 'nav-item-expanded nav-item-open' : '' }} ">
+                <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Users Managements</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Complications">
                         <li class="nav-item">
