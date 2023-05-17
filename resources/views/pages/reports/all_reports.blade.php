@@ -23,7 +23,13 @@
                             <th scope="row">{{ $key + 1 }}</th>
                             <td>{{ $pregnantReport->maternityPregnant->maternityPatient->fullname }}</td>
                             <td>{{ $pregnantReport->issue }}</td>
-                            <td>{{ $pregnantReport->is_attended }}</td>
+                            <td>
+                                @if ($pregnantReport->is_attended == 0)
+                                    <span class="badge badge-danger">Not Attended</span>
+                                @else
+                                    <span class="badge badge-success">Attended</span>
+                                @endif
+                            </td>
                             <td>
                                 <div class="list-icons text-center">
                                     <div class="dropdown">
@@ -31,10 +37,13 @@
                                             <i class="icon-menu9"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-left">
-                                            <a href="#" data-toggle="modal" data-target="#Modal"
-                                                class="dropdown-item">
-                                                <i class="icon-plus3"></i>Reply</a>
-
+                                            @if (auth()->user()->specialist)
+                                                <a href="#" data-toggle="modal"
+                                                    data-target="#replyReportModal{{ $pregnantReport->id }}"
+                                                    class="dropdown-item">
+                                                    <i class="icon-plus3"></i>Reply
+                                                </a>
+                                            @endif
                                             <a href="#" data-toggle="modal" data-target=".bd-edit-modal-lg"
                                                 class="dropdown-item">
                                                 <i class="icon-pencil7"></i>View Reply</a>
@@ -42,6 +51,7 @@
                                     </div>
                                 </div>
                             </td>
+                            @include('partials.modals.reply_report')
                         </tr>
                     @endforeach
                 </tbody>

@@ -8,6 +8,8 @@ use App\Http\Controllers\maternityattendances\MaternityAttendancesController;
 use App\Http\Controllers\complications\ComplicationsController;
 use App\Http\Controllers\users\UsersController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,6 +55,9 @@ Route::post('logout',[UsersController::class,'logout']);
 Route::get('home', function () {
     return view('pages.dashboard');
 })->name('home');
+
+//reply-report
+Route::post('reply/report',[PregnantReportContoller::class,'storeReply']);
 
 });
 //user login
