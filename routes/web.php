@@ -46,6 +46,7 @@ Route::post('add/pregnant/complication',[ComplicationsController::class,'storePr
 
 //users
 Route::get('all/users',[UsersController::class,'getAllUsers']);
+Route::post('delete',[UsersController::class,'delete']);
 Route::post('all/users',[UsersController::class,'store']);
 
 //users specialization

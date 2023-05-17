@@ -16,6 +16,6 @@ class PregnantReportReply extends Model
         return $this->belongsTo(PregnantReport::class);
     }
     public function specialist(){
-        return $this->belongsTo(Specialist::class);
+        return $this->belongsTo(Specialist::class,'specialist_id');
     }
 }

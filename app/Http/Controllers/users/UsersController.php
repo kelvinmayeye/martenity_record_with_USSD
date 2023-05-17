@@ -80,4 +80,26 @@ class UsersController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
+
+    public function delete(Request $request){
+        $user=User::find($request->user_id);
+        if(!$user){
+            Session::flash("error","User not found");
+            return back();
+        }
+        if($user->specialist->count() > 0){
+            Session::flash("error", "Can't delete this user because has specialization");
+            return back();
+        }
+       // return $user->specialist->reportReplies;
+       if ($user->specialist && $user->specialist->reportReplies()->count() > 0) {
+        Session::flash("error", "Can't delete this user because they have replied to reports");
+            return back();
+        } else {
+        $user->delete();
+        Session::flash("success", "User deleted");
+            return back();
+        }
+        
+    }
 }

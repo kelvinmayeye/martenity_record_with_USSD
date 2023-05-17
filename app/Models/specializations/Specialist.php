@@ -20,6 +20,6 @@ class Specialist extends Model{
     }
 
     public function reportReplies(){
-        return $this->hasMany(PregnantReportReply::class);
+        return $this->hasMany(PregnantReportReply::class,'specialist_id');
     }
 }

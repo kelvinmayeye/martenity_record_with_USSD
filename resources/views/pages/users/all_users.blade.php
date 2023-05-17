@@ -47,13 +47,6 @@
                                                         <i class="icon-plus2"></i>Specialization</a>
 
 
-                                                    {{-- <button type="submit" class="dropdown-item"><i class="icon-lock"></i>
-                                                        Reset
-                                                        password</button> --}}
-
-
-                                                    {{-- Delete --}}
-
                                                     <a id="" href="#" class="dropdown-item"
                                                         data-toggle="modal" data-target="#confirm{{ $user->id }}"><i
                                                             class="icon-trash"></i> Delete</a>
@@ -64,7 +57,7 @@
                                     </td>
 
                                     @include('partials.modals.add_user_specialization')
-                                    {{-- @include('partials.modals.delete_user_confirmation') --}}
+                                    @include('partials.modals.delete_user_confirmation')
                                 </tr>
                             @endforeach
                         </tbody>
