@@ -54,7 +54,7 @@
                     <div class="form-group col-md-6">
                         <label>Phone Number</label>
                         <input type="text" class="form-control" name="PhoneNumber" maxlength="10"
-                            placeholder="eg. 078212000">
+                            placeholder="eg. 255672900123">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Register</button>
