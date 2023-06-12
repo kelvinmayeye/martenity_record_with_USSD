@@ -14,7 +14,9 @@ class Kernel extends ConsoleKernel
      * @return void
      */
     protected function schedule(Schedule $schedule){
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('sms:send')->after(function () {
+            // Perform any necessary cleanup after sending the SMS
+        })->delay(now()->addMinutes(2));
     }
 
     /**
