@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="media-body text-right">
-                        <h3 class="mb-0">783</h3>
+                        <h3 class="mb-0">{{ $weeklyReport->count() }}</h3>
                         <span class="text-uppercase font-size-xs">Weekly Reported</span>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="media-body text-right">
-                        <h3 class="mb-0">7893</h3>
+                        <h3 class="mb-0">{{ $unattendedReports->count() }}</h3>
                         <span class="text-uppercase font-size-xs">Unattendend Reports</span>
                     </div>
                 </div>

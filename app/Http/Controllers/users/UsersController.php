@@ -11,6 +11,7 @@ use App\Models\specializations\Specialization;
 use App\Models\specializations\Specialist;
 use App\Models\maternitypregnants\MaternityPregnant;
 use App\Models\pregnantreports\PregnantReport;
+use Illuminate\Support\Carbon;
 
 class UsersController extends Controller
 {
@@ -46,9 +47,9 @@ class UsersController extends Controller
         $user = Specialist::find($request->user_id);
         if($user){
             Session::flash('error','This user has specialization already');
-            return back();  
+            return back();
         }
-        
+
         $specialist = new Specialist();
         $specialist->user_id = $request->user_id;
         $specialist->specialization_id = $request->specialization;
@@ -102,12 +103,14 @@ class UsersController extends Controller
         Session::flash("success", "User deleted");
             return back();
         }
-        
+
     }
 
     public function dashboard(){
         $undeliveredPatients = MaternityPregnant::where('is_delivered', 0)->get();
         $unattendedReports = PregnantReport::where('is_attended', 0)->get();
-        return view('pages.dashboard',compact('undeliveredPatients','unattendedReports'));
-    } 
+        $weeklyReport = PregnantReport::where('created_at', '>=', Carbon::now()->subDays(7))->get();
+        $unattendedReports = PregnantReport::where('is_attended', 0)->get();
+        return view('pages.dashboard',compact('undeliveredPatients','unattendedReports','weeklyReport','unattendedReports'));
+    }
 }
