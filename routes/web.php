@@ -67,11 +67,6 @@ Route::get('add/specialization',[SpecializationsController::class,'addSpecializa
 
 });
 
-
-
-
-
-
 //user login
 Route::post('login',[UsersController::class,'login']);
 Route::get('/', function () {

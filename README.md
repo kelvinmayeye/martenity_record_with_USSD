@@ -40,12 +40,12 @@
 	<h2 id="usage">Usage</h2>
 	<p>The project is designed to be used by pregnant women and medical practitioners. Pregnant women can access medical services by creating an account and scheduling appointments. Medical practitioners can access patients' medical records and provide timely medical services.</p>
 	<p>Additionally, pregnant women with feature phones can report any issues during postnatal care by dialing a USSD code provided by the system.</p>
-	<h2 id="contributing">Contributing</h2>
-	<p>Contributions to the project are welcome. To contribute, follow the steps below:</p>
+	<h2>Admin</h2>
+	<p>user with role 1 == admin</p>
 	<ol>
-		<li>Fork the repository from GitHub.</li>
-		<li>Create a new branch and make the necessary changes.</li>
-		<li>Submit a pull request explaining the changes made.</li>
+		<li>can add other user</li>
+		<li>Adds Complications</li>
+		<li>Specilizations</li>
 	</ol>
 	<h2 id="license">License</h2>
 	<p>The project is licensed under the MIT License.</p>

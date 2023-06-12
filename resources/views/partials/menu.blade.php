@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="media-body">
-                        <div class="media-title font-weight-semibold">username</div>
+                        <div class="media-title font-weight-semibold">{{ auth()->user()->first_name }}</div>
                         <div class="font-size-xs opacity-50">
                             <i class="icon-user font-size-sm"></i> &nbsp;administrator
                         </div>
@@ -71,7 +71,7 @@
                 </li>
 
                 {{-- Complication --}}
-                @if(auth()->user()->specialist)
+                @if(auth()->user()->specialist || auth()->user()->role==1)
                 <li
                     class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['add.installments', 'view.installments']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-drawer"></i> <span>Complications</span></a>

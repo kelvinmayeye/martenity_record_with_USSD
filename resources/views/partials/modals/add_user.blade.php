@@ -19,8 +19,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="">Middlename</label>
-                            <input type="text" class="form-control" name="middlename" placeholder="Middletname"
-                                required>
+                            <input type="text" class="form-control" name="middlename" placeholder="Middletname">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="">Lastname</label>

@@ -29,14 +29,6 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-4">
-                            <label for="">Sex</label>
-                            <select name="sex" class="form-control" required>
-                                <option selected disabled>Select...</option>
-                                <option value="male">male</option>
-                                <option value="female">female</option>
-                            </select>
-                        </div>
                         <div class="form-group col-md-8">
                             <label for="">Specialization</label>
                             <select name="specialization" class="form-control">
