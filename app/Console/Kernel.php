@@ -13,9 +13,10 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
-    protected function schedule(Schedule $schedule)
-    {
-        // $schedule->command('inspire')->hourly();
+    protected function schedule(Schedule $schedule){
+    $schedule->command('sms:send')->everyMinute()->after(function () {
+        // Perform any necessary cleanup after sending the SMS
+    });
     }
 
     /**

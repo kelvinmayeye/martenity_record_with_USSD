@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger("maternity_pregnant_id");
             $table->enum('type', ['prenatal', 'postnatal']);
-            $table->decimal('weight', 3, 2)->nullable();
+            $table->double('weight')->nullable();
             $table->text('description');
             $table->bigInteger('specialist_id');
             $table->timestamps();

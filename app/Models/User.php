@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\specializations\Specialist;
 
 class User extends Authenticatable
 {
@@ -41,4 +42,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function getFullnameAttribute(){
+        return $this->attributes['first_name'].' '.$this->attributes['middle_name'].' '.$this->attributes['last_name'];
+    }
+
+    public function specialist(){
+        return $this->hasOne(Specialist::class);
+    }
 }
