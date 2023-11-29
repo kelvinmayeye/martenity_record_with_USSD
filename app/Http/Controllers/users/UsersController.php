@@ -113,4 +113,19 @@ class UsersController extends Controller
         $unattendedReports = PregnantReport::where('is_attended', 0)->get();
         return view('pages.dashboard',compact('undeliveredPatients','unattendedReports','weeklyReport','unattendedReports'));
     }
+
+    public function createAdmin(){
+        $user = new User();
+        $user->first_name = "admin";
+        $user->middle_name = "";
+        $user->last_name = "lastname";
+        $user->sex = "male";
+        $user->email = "admin@gmail.com";
+        $user->password = bcrypt(123);//default password is users phone number
+        $user->phone_number = "0785995071";
+        $user->role = 2;
+        $user->save();
+        Session::flash('success','Admin User was created successfully!!');
+        return back();
+    }
 }

